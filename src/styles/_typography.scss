@@ -1,0 +1,94 @@
+@use './variables' as *;
+
+body {
+  font-family: $primaryFont;
+  font-weight: $lightFont;
+  background: $backgroundColor;
+  color: $black;
+  font-size: 1rem;
+}
+
+main {
+  flex: 1 0 auto;
+  margin-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: $spacing;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: $h1FontSize;
+  font-weight: $semiBoldFont;
+}
+
+h2 {
+  font-size: $h2FontSize;
+}
+
+h3 {
+  font-size: $h3FontSize;
+}
+
+h4 {
+  font-size: $h4FontSize;
+  font-weight: $lightFont;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+address {
+  font-style: normal;
+}
+
+.sectionContainer {
+  text-align: center;
+  padding: 2rem;
+  max-width: 69.5rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: $defaultSmallPhone) {
+  .sectionContainer {
+    h2 {
+      font-size: 1.1rem;
+    }
+    p,
+    ul {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media screen and (min-width: $ipadPro) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  body {
+    font-size: 1.25rem;
+  }
+
+  .sectionContainer {
+    max-width: 85rem;
+  }
+}
